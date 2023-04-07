@@ -4,12 +4,12 @@
 How to Use 2-matrix_divided.py
 ==============================
 
-Defining  a matrix division function by use of the module  ``matrix_divided(matrix, div)``.
+This module defines a matrix division function ``matrix_divided(matrix, div)``.
 
 Usage
 =====
 
-``matrix_divided(...)`` returns a new matrix  a copy of the parameter
+``matrix_divided(...)`` returns a new matrix that is a copy of the parameter
 ``matrix`` with all elements divided by ``div``.
 
 ::

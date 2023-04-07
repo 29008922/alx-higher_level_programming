@@ -5,7 +5,7 @@ How to Use 0-add_integer.py
 ===========================
 
 This module defines an integer addition function ``add_integer(a, b=98)``.
-#where a is an integer greater than 0
+
 Usage
 =====
 
@@ -15,38 +15,38 @@ that value is equivalent to using the ``+`` operator.
 ::
 
     >>> add_integer = __import__('0-add_integer').add_integer
-    >>> add_integer(7, 9)
-    16
+    >>> add_integer(2, 3)
+    5
 
 ::
 
-    >>> add_integer(7, -9)
-    -2
+    >>> add_integer(2, -3)
+    -1
 
 The function also works with floating-point values.
 
 ::
 
-    >>> add_integer(10.0, 11.0)
-    21.0
+    >>> add_integer(2.0, 3.0)
+    5
 
-# floats are casted to integer before addition is done.
-
-::
-
-    >>> add_integer(4.0, 5.0)
-    
-9.0
-::
-
-    >>> add_integer(-2.0, -0.2)
-    0
-
-#combining floating and non floating point values.
+Note that floats are casted to ints before addition is performed.
 
 ::
 
-    >>> add_integer(6.3, -5.3)
+    >>> add_integer(2.9, 0.2)
+    2
+
+::
+
+    >>> add_integer(-2.9, -0.2)
+    -2
+
+Floating and non-floating point values can be combined.
+
+::
+
+    >>> add_integer(2.3, -3)
     -1
 
 The second argument is optional - by default, it is 98.
@@ -56,33 +56,33 @@ The second argument is optional - by default, it is 98.
     >>> add_integer(2)
     100
 
-Non-integers
+Non-Numbers
 ===========
 
-``add_integer()``both arguments are either integers or floats.
- TypeError is raised If argument is a non-integer and non-float:
+``add_integer()`` expects that both arguments are either integers or floats.
+If either argument is a non-integer and non-float, a TypeError is raised:
 
 ::
 
-    >>> add_integer("hello", 1)
+    >>> add_integer("hello", 3)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 ::
 
-    >>> add_integer(34, "hello")
+    >>> add_integer(2, "hello")
     Traceback (most recent call last):
     TypeError: b must be an integer
 
 ::
 
-    >>> add_integer()
+    >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 ::
 
-    >>> add_integer(9.3, None)
+    >>> add_integer(2.3, None)
     Traceback (most recent call last):
     TypeError: b must be an integer
 
@@ -120,11 +120,6 @@ And again with NaN numbers.
 
 ::
 
-    >>> add_integer(3, float('nan'))
+    >>> add_integer(2, float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
-
-
-++++++++++++++++++++++++++++++++++
-
-
