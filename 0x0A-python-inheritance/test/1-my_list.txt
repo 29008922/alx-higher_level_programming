@@ -1,0 +1,24 @@
+test for 1-my_list.py
+...............................................................
+>>> case 0: import
+	>>> mylist = __import__("1-my_list").mylist
+	>>>
+...............................................................
+   case 1: common case
+>>> my_list = mylist()
+>>> my_list.append(1)
+>>> my_list.append(4)   
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+.................................................................
+case 2: not defined object
+>>> my_list = __import__("1-my_list").mylist
+traceback(most recent call last):
+file "<stdin>", line 1 in <module>
+NameError : name " my_list 2 " is not defined.
