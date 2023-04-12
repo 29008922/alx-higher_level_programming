@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""
-class Mylist
-"""
+"""contains the MyList class"""
 
 
 class MyList(list):
-    """MyList class
-    """
+    """a subclass of list"""
+    def __init__(self):
+        """object initialization"""
+        super().__init__()
 
     def print_sorted(self):
-        """print list
-        """
+        """sorted list"""
         print(sorted(self))
