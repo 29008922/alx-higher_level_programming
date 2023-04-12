@@ -2,12 +2,11 @@
 """Attr lookup"""
 
 def lookup(obj):
-	"""Lookup all attributes in Class
-	
-	Args:
-		obj: class object
+   """Lookup all attributes in Class
+   Args:
+      obj: class object
 
-	Returns:
-		nothing
-	"""
-	return [i for i in dir(obj)]
+   Returns:
+      nothing
+   """
+   return [i for i in dir(obj)]
