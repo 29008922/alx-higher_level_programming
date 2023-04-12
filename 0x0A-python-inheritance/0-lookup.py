@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""Attr lookup"""
 
-"""define an object sttribute look up function"""
 def lookup(obj):
-	"""returns a list of objects attribute"""
-	return(dir(obj))
+    """Lookup all attributes in Class
+    Args:
+        obj: class object
+    Returns:
+        nothing
+    """
+    return [i for i in dir(obj)]
