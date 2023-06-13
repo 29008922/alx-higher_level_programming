@@ -1,4 +1,8 @@
 #!/usr/bin/node
-const programing_language = 'C is fun\nPython is cool\nJavascript is amazing';
-console.log(programing_language);
+let myVar= 'C is fun\n';
+console.log(myVar);
+myVar = 'Python is cool\n';
+console.log(myVar);
+myVar = 'Javascript is amazing';
+console.log(myVar);
 
